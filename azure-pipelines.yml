@@ -3,11 +3,11 @@ trigger:
 - master
 
 pool:
-  vmImage: 'WINDEV2012EVAL'
+  vmImage: 'KATALON1'
 
 steps:
 - task: katalonTask@0
   displayName: 'Execute Katalon Studio project'
   inputs:
-    version: '7.0.1'
+    location: 'C:\Katalon_Studio_7.8.2'
     executeArgs: '-browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
